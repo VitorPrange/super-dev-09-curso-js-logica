@@ -137,3 +137,51 @@ function descobrirColaboradorComMaiorBonificacaoSalario(){
     }
     alert(nome + " tem a amior bonificação: " + maiorBonificacao);
 }
+
+function descobrirMenorNome(){
+    let indice = 0;
+    let menorNome = "yuipretuytyuiwreuyityuiteryolytuoweyrowtuieroitweoiytiurwyeotuiywrgtegfurgtoiuwterouitwriuwteoiueuiweiouwruiwruiowruiowiowutiuoriwert";
+
+    let quantidadeDesejada = parseInt(prompt("Digite a quantidade de nomes"));
+
+    while(indice < quantidadeDesejada){
+
+        let nome = prompt("Digite o nome").trim();
+
+        if(nome.length < menorNome.length){
+            menorNome =  nome;
+        }
+        indice = indice + 1;
+    }
+    alert("Menor nome: " + menorNome + "\n" + 
+    "Quantidade de caracteres: " + menorNome.length
+    );
+}
+
+function repetirEnquantoUsuarioDesejaContinuar(){
+    let desejaContinuar = "";
+
+    alert("Bem vindo ao sistema de cadastro de fila do SUS")
+
+    while(desejaContinuar != "não"){
+        let nomePaciente = prompt("Digite o nome do paciente");
+
+        desejaContinuar = prompt("Deseja continuar? [sim/não]").toLowerCase();
+    }
+}
+
+function repetirEnquantoUsuarioDesejaContinuarComConfirm(){
+    let desejaContinuar = true;
+    let quantidadePacientesCadastrados = 0;
+
+    alert("Bem vindo ao sistema de cadastro de fila do SUS")
+
+    while(desejaContinuar != false){
+        let nomePaciente = prompt("Digite o nome do paciente");
+
+        quantidadePacientesCadastrados = quantidadePacientesCadastrados + 1;
+
+        desejaContinuar = confirm("Deseja continuar?");
+    }
+    alert("Quantidade de pacientes cadastrados: " + quantidadePacientesCadastrados);
+}
