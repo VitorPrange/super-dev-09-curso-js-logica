@@ -187,3 +187,134 @@ function exercicio20RelatorioSimples(){
         "Media idades: " + mediaIdades
     );
 }
+
+function exercicio21MostrarNumerosParesIntervalo(){
+    let inicio = parseInt(prompt("Digite o inicio"));
+    let fim = parseInt(prompt("Digite o fim"));
+
+    for(let indice = inicio; indice <= fim; indice = indice + 1){
+        if(indice % 2 === 0){
+            console.log(indice);
+        }
+    }
+}
+
+function exercicio22SomarNumerosIntervalo(){
+    let inicio = parseInt(prompt("Digite o inicio"));
+    let fim = parseInt(prompt("Digite o fim"));
+    let somaIntervalo = 0;
+
+    for(let indice = inicio; indice <= fim; indice = indice + 1){
+        somaIntervalo = somaIntervalo + indice;
+    }
+    alert(somaIntervalo);
+}
+
+function exercicio23ContarNumerosNegativos(){
+    let contadorNegativos = 0;
+    for(let index = 0; index < 6; index = index + 1){
+        let numero = parseInt(prompt("Digite o numero"));
+
+        if(numero < 0){
+            contadorNegativos = contadorNegativos + 1;
+        }
+    }
+    alert(contadorNegativos);
+}
+
+function exercicio24CalcularMediaAlturas(){
+    let somaAlturas = 0;
+    let index = 0;
+
+    for(index; index < 5; index = index + 1){
+        let altura = parseFloat(prompt("Digite a altura"));
+
+        somaAlturas = somaAlturas + altura;
+        
+    }
+    let mediaAlturas = somaAlturas / index
+
+    alert(mediaAlturas);
+}
+
+function exercicio25ContarNotasAcimaSete(){
+    let contadorNotas = 0;
+    for(let index = 0; index < 8; index = index + 1){
+        let nota = parseFloat(prompt("Digite a nota"));
+
+        if(nota >= 7){
+            contadorNotas = contadorNotas + 1;
+        }
+    }
+    alert(contadorNotas);
+}
+
+function exercicio26MaiorEMenorNumero(){
+    let maiorNumero = 0;
+    let menorNumero = 99999999999999;
+
+    for(let index = 0; index < 7; index = index + 1){
+        let numero = parseFloat(prompt("Digite o numero"));
+
+        if(numero > maiorNumero){
+            maiorNumero = numero;
+        }
+        else if(numero < menorNumero){
+            menorNumero = numero;
+        }
+    }
+    alert(maiorNumero);
+    alert(menorNumero);
+}
+
+function exercicio27SomarIdadesMaioresDeIdade(){
+
+    for(let indice = 0; indice < 5; indice = indice + 1){
+        let nome = prompt("Digite o nome");
+        let idade = parseInt(prompt("Digite a sua idade"));
+
+        if(idade >= 18){
+            somaIdades = somaIdades + idade;
+        }
+    }
+    alert(somaIdades);
+}
+
+function exercicio28ContarHomensEMulheres(){
+    let contagemM = 0;
+    let contagemF = 0;
+    for(let indice = 0; indice < 6; indice = indice + 1){
+        let nome = prompt("Digite o nome");
+        let sexo = prompt("Digite o sexo");
+
+        if(sexo === "M"){
+            contagemM = contagemM + 1;
+        }
+        else if(sexo === "F"){
+            contagemF =  contagemF + 1;
+        }
+    }
+    alert("Homens" + contagemM + "\n" + "Mulheres" + contagemF);
+}
+
+function exercicio29ValidarNota(){
+    let somaNotas = 0;
+    let index = 0;
+
+    for(index; index < 5; index = index + 1){
+
+        let nota = parseFloat(prompt("Digite a nota"));
+
+        if(nota > 10 || nota < 0){
+            nota = parseFloat(prompt("Nota invalida, digite a nota novamente"));
+        }
+        somaNotas = somaNotas + nota;
+    }
+    let mediaNotas = somaNotas / index;
+
+    alert(mediaNotas);
+}
+
+function exercicio30TabuadasCompletas(){
+
+}
