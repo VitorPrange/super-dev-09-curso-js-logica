@@ -105,7 +105,7 @@ function exercicio13ContarLetrasNomes(){
 }
 
 function exercicio14MaiorNumero(){
-    let maiorNumero = 0;
+    let maiorNumero = -Infinity;
     for(let indice = 0; indice < 5; indice = indice + 1){
         let numero = parseInt(prompt("Digite o numero"));
 
@@ -250,8 +250,8 @@ function exercicio25ContarNotasAcimaSete(){
 }
 
 function exercicio26MaiorEMenorNumero(){
-    let maiorNumero = 0;
-    let menorNumero = 99999999999999;
+    let maiorNumero = -Infinity;
+    let menorNumero = +Infinity;
 
     for(let index = 0; index < 7; index = index + 1){
         let numero = parseFloat(prompt("Digite o numero"));
@@ -259,7 +259,7 @@ function exercicio26MaiorEMenorNumero(){
         if(numero > maiorNumero){
             maiorNumero = numero;
         }
-        else if(numero < menorNumero){
+        if(numero < menorNumero){
             menorNumero = numero;
         }
     }
@@ -268,7 +268,7 @@ function exercicio26MaiorEMenorNumero(){
 }
 
 function exercicio27SomarIdadesMaioresDeIdade(){
-
+    let somaIdades = 0;
     for(let indice = 0; indice < 5; indice = indice + 1){
         let nome = prompt("Digite o nome");
         let idade = parseInt(prompt("Digite a sua idade"));
@@ -305,7 +305,7 @@ function exercicio29ValidarNota(){
 
         let nota = parseFloat(prompt("Digite a nota"));
 
-        if(nota > 10 || nota < 0){
+        while(nota > 10 || nota < 0){
             nota = parseFloat(prompt("Nota invalida, digite a nota novamente"));
         }
         somaNotas = somaNotas + nota;
@@ -316,5 +316,70 @@ function exercicio29ValidarNota(){
 }
 
 function exercicio30TabuadasCompletas(){
+ for(let index = 1; index <= 5; index = index + 1){
+    for(let index2 = 1; index2 <= 10; index2 = index2 + 1){
+        console.log(index + " " + index2 + " = " + index * index2);
+    }
+ }
+}
 
+function exercicio31ContarAprovadosReprovados(){
+    let contaPassados = 0;
+    let contaReprovados = 0;
+
+    for(let index = 0; index < 6; index = index + 1){
+        let nota = parseInt(prompt("Digite a nota"));
+
+        if(nota >= 7){
+            contaPassados = contaPassados + 1;
+        }
+        else if(nota < 7){
+            contaReprovados = contaReprovados + 1;
+        }
+    }
+    console.log("Passados " + contaPassados + "Reprovados " + contaReprovados);
+}
+
+function exercicio32SomarValoresPositivos(){
+    let contagem = 0;
+    for(let index = 0; index < 8; index = index + 1){
+        let numero = parseInt(prompt("Digite o numero"));
+
+        if(numero > 0){
+            contagem = contagem + numero;
+        }
+       
+    }
+    console.log(contagem);
+}
+
+function exercicio33EncontrarNomeMaisLongo(){
+    let nomeMaisLongo = "";
+    for(let index = 0; index < 5; index = index + 1){
+        let nome = prompt("Digite o numero");
+
+        if(nome.length > nomeMaisLongo.length){
+            nomeMaisLongo = nome;
+        }
+    }
+    console.log(nomeMaisLongo);
+}
+
+function exercicio34CalcularFatorial(){
+    let numero = parseInt(prompt("Digite o numero"));
+    let resultado = 1;
+
+    for(let index = 1; index <= numero; index = index + 1){
+        resultado = resultado * index
+    }
+    console.log(resultado);
+}
+
+function exercicio35ContagemRegressivaPersonalizada(){
+    let numero = parseInt(prompt("Digite o numero"));
+
+    for(let index = numero; index >= 0; index = index - 1){
+        console.log(index);
+    }
+    console.log("Fim da contagem");
 }
