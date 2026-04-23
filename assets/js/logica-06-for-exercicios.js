@@ -356,7 +356,7 @@ function exercicio32SomarValoresPositivos(){
 function exercicio33EncontrarNomeMaisLongo(){
     let nomeMaisLongo = "";
     for(let index = 0; index < 5; index = index + 1){
-        let nome = prompt("Digite o numero");
+        let nome = prompt("Digite o nome");
 
         if(nome.length > nomeMaisLongo.length){
             nomeMaisLongo = nome;
@@ -382,4 +382,105 @@ function exercicio35ContagemRegressivaPersonalizada(){
         console.log(index);
     }
     console.log("Fim da contagem");
+}
+
+function exercicio36ContarNotasEmFaixas(){
+    let notas04 = 0;
+    let notas56 = 0;
+    let notas78 = 0;
+    let notas910 = 0;
+
+    for(let index = 0; index < 8; index = index + 1){
+        let nota = parseInt(prompt("Digite a nota"));
+
+        if(nota >= 0 && nota <= 4){
+            notas04 = notas04 + 1;
+        }
+        else if(nota >= 5 && nota <= 6){
+            notas56 = notas56 + 1;
+        }
+        else if(nota >= 7 && nota <= 8){
+            notas78 = notas78 + 1;
+        }
+        else if(nota >= 9 && nota <= 10){
+            notas910 = notas910 + 1;
+        }
+    }
+}
+
+function exercicio37SomarMultiplosDeDoisETres(){
+    let numero = parseInt(prompt("Digite o numero"));
+    let soma = 0;
+
+    for(let index = 1; index <= numero; index = index + 1){
+        if(index % 2 === 0 || index % 3 === 0){
+            soma = soma + index;
+        }
+    }
+}
+
+function exercicio38CalcularMediaComValidacao(){
+
+
+    for(let index = 0; index < 6; index = index + 1){
+
+        let nota = parseInt(prompt("Digite a nota"));
+
+        if(nota < 0 && nota > 10){
+            notas04 = notas04 + 1;
+        }
+        else if(nota >= 5 && nota <= 6){
+            notas56 = notas56 + 1;
+        }
+        else if(nota >= 7 && nota <= 8){
+            notas78 = notas78 + 1;
+        }
+        else if(nota >= 9 && nota <= 10){
+            notas910 = notas910 + 1;
+        }
+    }
+}
+
+function exercicio39ContarParesEImparesDigitados(){
+
+
+    for(let index = 0; index < 10; index = index + 1){
+        let contadorPares = 0;
+        let contadorImpares = 0;
+        let somaTodosNumeros = 0;
+
+        let numero = parseInt(prompt("Digite o numero"));
+
+        if(numero % 2 === 0){
+            contadorPares = contadorPares + 1;
+        }else{
+            contadorImpares = contadorImpares + 1;
+        }
+
+        somaTodosNumeros = somaTodosNumeros + numero;
+    }
+    console.log("Pares: " + contadorPares + "\n" + "Impares: " + contadorImpares + "\n" + "Soma: " + somaTodosNumeros);
+}
+
+function exercicio40RelatorioCompletoTurmaSemVetor(){
+    let somaAlunosCadastrados = 0;
+    let somaAlunosAprovados = 0;
+    let somaAlunosReprovados = 0;
+    let maiorMediaTurma = 0;
+    let menorMediaTurma = 0;
+    let nomeAlunoComMaiorMedia = 0;
+
+    for(let index = 0; index < 5; index = index + 1){
+        let nome = prompt("Digite o nome");
+        let nota1 = parseInt(prompt("Digite a nota"));
+        let nota2 = parseInt(prompt("Digite a nota"));
+
+        somaAlunosCadastrados = somaAlunosCadastrados + 1;
+
+        let media = (nota1 + nota2) / 2;
+
+        if(media)[
+            
+        ]
+    }
 }
