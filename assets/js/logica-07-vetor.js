@@ -48,7 +48,7 @@ function exemplo02(){
 
         "Nome: " + alunos[1] + "\n" +
         "Frequencias: " + frequencias[1] + "\n" +
-        "Status: " + status[1] +
+        "Status: " + status[1]
     )
 
 }
