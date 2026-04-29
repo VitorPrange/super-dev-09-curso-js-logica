@@ -42,7 +42,7 @@ function verificarPalavraNaFrase(){
 function substituirCorNaFrase(){
     let frase = prompt("Digite a frase");
 
-    frase = frase.toLocaleLowerCase().replace("azul", "vermelho");
+    frase = frase.toLowerCase().replace("azul", "vermelho");
 
     alert(frase);
 }
@@ -50,7 +50,7 @@ function substituirCorNaFrase(){
 function trocarEstacao(){
     let frase = "Eu gosto de verão"
 
-    frase = frase.toLocaleLowerCase().replace("verão", "inverno");
+    frase = frase.toLowerCase().replace("verão", "inverno");
 
     alert(frase);
 }

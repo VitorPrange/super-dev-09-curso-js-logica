@@ -1,13 +1,13 @@
 function exemploToLowerCase(){
     let nome = "John Doe"
-    let nomeMinusculo = nome.toLowerCase;
+    let nomeMinusculo = nome.toLowerCase();
 
     alert("To lowercase: " + nomeMinusculo)
 }
 
 function exemploToUpperCase(){
     let nome = "John Doe"
-    let nomeMaiusculo = nome.toUpperCase;
+    let nomeMaiusculo = nome.toUpperCase();
 
     alert("To uppercase: " + nomeMaiusculo)
 }
