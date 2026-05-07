@@ -43,3 +43,119 @@ function exemplo02(){
         alert(alunos[i] + " tem a média: " + media + " status é: " + status);
     }
 }
+
+function exemplo03(){
+    let colaboradores = [];
+    let horas = [];
+    let valores = [];
+    let salarios = [];
+
+    let quantidade = parseInt(prompt("Digite a quantidade de colaboradores"));
+
+    for(let i = 0; i < quantidade; i += 1){
+        let colaborador = prompt("Digite o nome do colaborador");
+        let quantidadeHoras = parseInt(prompt("Digite a quantidade de horas"));
+        let valorHora = parseFloat(prompt("Digite o valor hora"));
+
+        colaboradores.push(colaborador);
+        horas.push(quantidadeHoras);
+        valores.push(valorHora);
+    }
+
+    for(let i = 0; i < quantidade; i += 1){
+        let quantidadeHoras = horas[i];
+        let valorHora = valores[i];
+
+        let salario = quantidadeHoras * valorHora;
+
+        salarios.push(salario);
+    }
+
+    let maiorValorHora = 0;
+
+    for(let i = 0; i < quantidade; i += 1){
+        let valorHora = valores[i];
+
+        if(valorHora > maiorValorHora){
+            maiorValorHora = valorHora;
+        }
+    }
+
+    let maiorSalario = 0;
+    let nomeMaiorSalario = "";
+
+    for(let i = 0; i < quantidade; i += 1){
+        let salario = salarios[i];
+        let colaborador = colaboradores[i];
+
+        if(salario > maiorSalario){
+            maiorSalario = salario;
+            nomeMaiorSalario = colaborador;
+        }
+
+        //forma alternativa
+
+        if(salarios[i] > maiorSalario){
+            maiorSalario = salarios[i];
+            nomeMaiorSalario = colaboradores[i];
+        }
+    }
+
+    let colaboradorMenorNome = "hjkfajhkakjhjhkgjkhjhkgjhkgjkhgfdjkhfgdjhkgfdhjkdfghjdfghjgfdhjkfhjkgfjjhkfdfjhjhkgfjhkgfjhkgfjhkgfdjhkgfdjhkgfdjhkgfdjhkgfdhjkgfjhkgfdjhkfgdhkjfgdjhkdghkjjhkgjhkfdghjkgjhkagfjhkgfjhkgfdhjkgfhkjghjkahjkfdghjkfdghjkfhjfghjkafdkdfggfdhkfdhjgdfjaghklgfatrdfhkdthhhjkfajhkakjhjhkgjkhjhkgjhkgjkhgfdjkhfgdjhkgfdhjkdfghjdfghjgfdhjkfhjkgfjjhkfdfjhjhkgfjhkgfjhkgfjhkgfdjhkgfdjhkgfdjhkgfdjhkgfdhjkgfjhkgfdjhkfgdhkjfgdjhkdghkjjhkgjhkfdghjkgjhkagfjhkgfjhkgfdhjkgfhkjghjkahjkfdghjkfdghjkfhjfghjkafdkdfggfdhkfdhjgdfjaghklgfatrdfhkdthhhjkfajhkakjhjhkgjkhjhkgjhkgjkhgfdjkhfgdjhkgfdhjkdfghjdfghjgfdhjkfhjkgfjjhkfdfjhjhkgfjhkgfjhkgfjhkgfdjhkgfdjhkgfdjhkgfdjhkgfdhjkgfjhkgfdjhkfgdhkjfgdjhkdghkjjhkgjhkfdghjkgjhkagfjhkgfjhkgfdhjkgfhkjghjkahjkfdghjkfdghjkfhjfghjkafdkdfggfdhkfdhjgdfjaghklgfatrdfhkdthhhjkfajhkakjhjhkgjkhjhkgjhkgjkhgfdjkhfgdjhkgfdhjkdfghjdfghjgfdhjkfhjkgfjjhkfdfjhjhkgfjhkgfjhkgfjhkgfdjhkgfdjhkgfdjhkgfdjhkgfdhjkgfjhkgfdjhkfgdhkjfgdjhkdghkjjhkgjhkfdghjkgjhkagfjhkgfjhkgfdhjkgfhkjghjkahjkfdghjkfdghjkfhjfghjkafdkdfggfdhkfdhjgdfjaghklgfatrdfhkdthhhjkfajhkakjhjhkgjkhjhkgjhkgjkhgfdjkhfgdjhkgfdhjkdfghjdfghjgfdhjkfhjkgfjjhkfdfjhjhkgfjhkgfjhkgfjhkgfdjhkgfdjhkgfdjhkgfdjhkgfdhjkgfjhkgfdjhkfgdhkjfgdjhkdghkjjhkgjhkfdghjkgjhkagfjhkgfjhkgfdhjkgfhkjghjkahjkfdghjkfdghjkfhjfghjkafdkdfggfdhkfdhjgdfjaghklgfatrdfhkdthhhjkfajhkakjhjhkgjkhjhkgjhkgjkhgfdjkhfgdjhkgfdhjkdfghjdfghjgfdhjkfhjkgfjjhkfdfjhjhkgfjhkgfjhkgfjhkgfdjhkgfdjhkgfdjhkgfdjhkgfdhjkgfjhkgfdjhkfgdhkjfgdjhkdghkjjhkgjhkfdghjkgjhkagfjhkgfjhkgfdhjkgfhkjghjkahjkfdghjkfdghjkfhjfghjkafdkdfggfdhkfdhjgdfjaghklgfatrdfhkdthhhjkfajhkakjhjhkgjkhjhkgjhkgjkhgfdjkhfgdjhkgfdhjkdfghjdfghjgfdhjkfhjkgfjjhkfdfjhjhkgfjhkgfjhkgfjhkgfdjhkgfdjhkgfdjhkgfdjhkgfdhjkgfjhkgfdjhkfgdhkjfgdjhkdghkjjhkgjhkfdghjkgjhkagfjhkgfjhkgfdhjkgfhkjghjkahjkfdghjkfdghjkfhjfghjkafdkdfggfdhkfdhjgdfjaghklgfatrdfhkdthhhjkfajhkakjhjhkgjkhjhkgjhkgjkhgfdjkhfgdjhkgfdhjkdfghjdfghjgfdhjkfhjkgfjjhkfdfjhjhkgfjhkgfjhkgfjhkgfdjhkgfdjhkgfdjhkgfdjhkgfdhjkgfjhkgfdjhkfgdhkjfgdjhkdghkjjhkgjhkfdghjkgjhkagfjhkgfjhkgfdhjkgfhkjghjkahjkfdghjkfdghjkfhjfghjkafdkdfggfdhkfdhjgdfjaghklgfatrdfhkdthhhjkfajhkakjhjhkgjkhjhkgjhkgjkhgfdjkhfgdjhkgfdhjkdfghjdfghjgfdhjkfhjkgfjjhkfdfjhjhkgfjhkgfjhkgfjhkgfdjhkgfdjhkgfdjhkgfdjhkgfdhjkgfjhkgfdjhkfgdhkjfgdjhkdghkjjhkgjhkfdghjkgjhkagfjhkgfjhkgfdhjkgfhkjghjkahjkfdghjkfdghjkfhjfghjkafdkdfggfdhkfdhjgdfjaghklgfatrdfhkdthhggshjjjjjjjjjjjjjjjjjjjdfhsgdfhshgjdfhgjfshgfdshgfsdhgjdfshhgjdfshgjdfshgjsdfhgjfdshgjfdhsghgdfhgjdfshgjdfshgjdfhgfdhgsdfhgjfs"
+
+    for(let i = 0; i < quantidade; i += 1){
+        let colaborador = colaboradores[i];
+
+        if(colaborador.length < colaboradorMenorNome.length){
+            colaboradorMenorNome = colaborador
+        }
+    }
+
+    alert("O maior valor hora pago: " + maiorValorHora +
+        "\nColaborador com maior salario: " + nomeMaiorSalario +
+        "\nColaborador menor nome: " + colaboradorMenorNome
+    )
+}
+
+function exemploMenu(){
+    let numeros = [];
+
+    let opcaoMenu = parseInt(prompt(`
+        1 - Cadastrar
+        2 - Listar todos
+        3 - Apresentar maior
+        10 - Sair
+        `));
+
+        while(opcaoMenu !== 10){
+            if(opcaoMenu === 1){
+                let numero = parseInt(prompt("Digite o numero"));
+                numeros.push(numero);
+                alert("Número cadastrado com sucesso");
+            }else if(opcaoMenu === 2){
+                let texto = "Números cadastrados:\n";
+                for(let i = 0; i < numeros.length; i += 1){
+                    let numero = numeros[i];
+                    texto = texto + numero + "\n";
+                }
+                alert(texto);
+            }else if(opcaoMenu === 3){
+                let maiorNumero = 0;
+                for(let i = 0; i < numeros.length; i += 1){
+                    if(numeros[i] > maiorNumero){
+                        maiorNumero = numeros[i];
+                    }
+                }
+
+                alert("Maior numero: " + maiorNumero);
+            }
+
+            opcaoMenu = parseInt(prompt(`
+                1 - Cadastrar
+                2 - Listar todos
+                3 - Apresentar maior
+                10 - Sair
+        `));
+        }
+        alert("Obrigado por utilizar nosso sistema");
+}
