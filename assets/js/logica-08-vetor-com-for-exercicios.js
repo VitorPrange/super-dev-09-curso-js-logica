@@ -170,3 +170,193 @@ function exercicio10(){
         alert("Aluno não encontrado");
     }
 }
+
+function exercicio11(){
+    let numeros = [];
+    let numerosMaioresQue10 = [];
+
+    for(let i = 0; i < 6; i += 1){
+        numeros.push(parseInt(prompt("Digite o numero")));
+
+        if(numeros[i] > 10){
+            numerosMaioresQue10.push(numeros[i]);
+        }
+    }
+
+    for(let i = 0; i < numeros.length; i += 1){
+        alert(numeros[i]);
+    }
+
+    for(let i = 0; i < numerosMaioresQue10.length; i += 1){
+        alert(numerosMaioresQue10[i]);
+    }
+}
+
+function exercicio12(){
+    let nomes = [];
+    let contador5Letras = 0;
+
+    for(let i = 0; i < 5; i += 1){
+        nomes.push(prompt("Digite o seu nome"));
+    }
+
+    for(let i = 0; i < nomes.length; i += 1){
+        if(nomes[i].length > 5){
+            contador5Letras = contador5Letras + 1;
+        }
+    }
+
+    alert("Numero de nomes com mais de 5 letras: " + contador5Letras);
+}
+
+function exercicio13(){
+    let idades = [];
+    let contadorMenor18 = 0;
+    let contadorIgualMaior18 = 0;
+
+    for(let i = 0; i < 7; i += 1){
+        idades.push(parseInt(prompt("Digite a idade")));
+    }
+
+    for(let i = 0; i < idades.length; i += 1){
+
+        if(idades[i] >= 18){
+            contadorIgualMaior18 = contadorIgualMaior18 + 1;
+        }else if(idades[i] < 18){
+            contadorMenor18 = contadorMenor18 + 1;
+        }
+    }
+
+    alert("Numero de idades maiores ou iguais a 18 anos: " + contadorIgualMaior18 + 
+        "Numero de idades menores de 18: " + contadorMenor18
+    );
+}
+
+function exercicio14(){
+    let notas = [];
+
+    for(let i = 0; i < 6; i += 1){
+        notas.push(parseInt(prompt("Digite a nota")));
+    }
+
+    for(let i = 0; i < 6; i += 1){
+        alert(notas[i]);
+    }
+
+    for(let i = 0; i < 6; i += 1){
+        if(notas[i] > 7){
+
+        }
+    }
+}
+
+function exercicio41(){
+    let nomes = [];
+    let salarioMensal = [];
+    let totalGastosMensais = [];
+    let quantidadeDependentes = [];
+    let saldoMensal = [];
+
+    for(let i = 0; i < 8; i += 1){
+        nomes.push(prompt("Digite seu nome"));
+        salarioMensal.push(parseFloat(prompt("Digite o seu salario mensal")));
+        totalGastosMensais.push(parseFloat(prompt("Digite total de gastos mensais")));
+        quantidadeDependentes.push(parseInt(prompt("Digite a quantidade de dependentes")));
+    }
+
+    for(let i = 0; i < nomes.length; i += 1){
+        alert(
+            "Nome: " + nomes[i] + 
+            "\nSalario mensal: " + salarioMensal[i] +
+            "\nTotal de gastos mensais: " + totalGastosMensais[i] +
+            "\nQuantidade de dependentes: " + quantidadeDependentes[i]
+        );
+
+        saldoMensal.push(salarioMensal[i] - totalGastosMensais[i]);
+    }
+
+    let nomeMaiorSalario = "";
+    let maiorSalario = -999999;
+
+    for(let i = 0; i < salarioMensal.length; i += 1){
+        if(salarioMensal[i] > maiorSalario){
+            maiorSalario = salarioMensal[i];
+            nomeMaiorSalario = nomes[i];
+        }
+    }
+
+    let nomeMenorSalario = "";
+    let menorSalario = 999999;
+
+    for(let i = 0; i < salarioMensal.length; i += 1){
+        if(salarioMensal[i] < menorSalario){
+            menorSalario = salarioMensal[i];
+            nomeMenorSalario = nomes[i];
+        }
+    }
+
+    let nomeMaiorGasto = "";
+    let maiorGasto = -999999;
+
+    for(let i = 0; i < totalGastosMensais.length; i += 1){
+        if(totalGastosMensais[i] > maiorGasto){
+            maiorGasto = totalGastosMensais[i];
+            nomeMaiorGasto = nomes[i];
+        }
+    }
+
+    let nomeMenorGasto = "";
+    let menorGasto = 999999;
+
+    for(let i = 0; i < totalGastosMensais.length; i += 1){
+        if(totalGastosMensais[i] < menorGasto){
+            menorGasto = totalGastosMensais[i];
+            nomeMenorGasto = nomes[i];
+        }
+    }
+
+    let maiorSaldo = -999999;
+
+    for(let i = 0; i < saldoMensal.length; i += 1){
+        if(saldoMensal[i] > maiorSaldo){
+            maiorSaldo = saldoMensal[i];
+        }
+    }
+
+    let menorSaldo = 999999;
+
+    for(let i = 0; i < saldoMensal.length; i += 1){
+        if(saldoMensal[i] < menorSaldo){
+            menorSaldo = saldoMensal[i];
+        }
+    }
+
+    let somaSalario = 0;
+    let mediaSalarial = 0;
+
+    for(let i = 0; i < salarioMensal.length; i += 1){
+        somaSalario = somaSalario + salarioMensal[i];
+    }
+
+    mediaSalarial = somaSalario / salarioMensal.length;
+
+    let somaGastos = 0;
+    let mediaGastos = 0;
+
+    for(let i = 0; i < totalGastosMensais.length; i += 1){
+        somaGastos = somaGastos + totalGastosMensais[i];
+    }
+
+    mediaGastos = somaGastos / totalGastosMensais.length;
+
+    let somaSaldos = 0;
+    let mediaSaldos = 0;
+
+    for(let i = 0; i < saldoMensal.length; i += 1){
+        somaSaldos = somaSaldos + saldoMensal[i];
+    }
+
+    mediaSaldos = somaSaldos / saldoMensal.length;
+
+
+}
